@@ -200,6 +200,9 @@ void fun(char *p)
 	if ( strcmp(str1[1],"无")==0 )
 		return ;
 	else if ( strcmp(str1[1],"整数")==0  || strcmp(str1[1],"小数")==0 )
+		if( look(str1[2])!= -1 )
+				printf("变量%s已存在！",str1[2]);
+		else
 		{
 			strcpy(peop[x].name, str1[2]);
 			peop[x].n=ctn(str1[4]);
